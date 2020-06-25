@@ -44,7 +44,7 @@ func _ready():
 		
 		
 	if(isHater):
-		pass
+		$Light.set_color(Color.red)
 		#$MeshInstance.get_surface_material(0).albedo_color(Color.black)
 		#$MeshInstance.material_override.albedo_color = Color.black
 	else:

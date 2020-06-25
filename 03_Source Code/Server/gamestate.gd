@@ -1,7 +1,7 @@
 extends Node
 
 # Default game port
-const DEFAULT_PORT = 44444
+const DEFAULT_PORT = 1337
 #https://gitlab.com/menip/godot-multiplayer-tutorials/-/blob/master/LobbylessTutorial/LobbylessTut.md
 # Max number of players
 const MAX_PLAYERS = 12

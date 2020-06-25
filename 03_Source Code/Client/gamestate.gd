@@ -1,7 +1,7 @@
 extends Node
 
 # Game port and ip
-const ip = "rgen.be"
+const ip = "127.0.0.1"
 const DEFAULT_PORT = 1337
 
 # Signal to let GUI know whats up
