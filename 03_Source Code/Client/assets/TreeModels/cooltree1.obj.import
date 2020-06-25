@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cooltree1.obj-968830be67666ed0f5fffb31d30fe261.mesh"
+
+[deps]
+
+files=[ "res://.import/cooltree1.obj-968830be67666ed0f5fffb31d30fe261.mesh" ]
+
+source_file="res://assets/TreeModels/cooltree1.obj"
+dest_files=[ "res://.import/cooltree1.obj-968830be67666ed0f5fffb31d30fe261.mesh", "res://.import/cooltree1.obj-968830be67666ed0f5fffb31d30fe261.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

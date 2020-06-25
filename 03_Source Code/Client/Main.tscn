@@ -1,0 +1,142 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/horroroidbold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 43
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+extra_spacing_char = 3
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+extra_spacing_char = 3
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+extra_spacing_top = 2
+extra_spacing_bottom = 2
+extra_spacing_char = 5
+font_data = ExtResource( 2 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 69.0
+margin_right = -7.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.5
+margin_top = -240.0
+margin_right = 512.5
+margin_bottom = 240.0
+custom_constants/separation = 100
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBox"]
+margin_top = 30.0
+margin_right = 1025.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 1 )
+text = "Der Hater "
+align = 1
+valign = 1
+
+[node name="Subtitle" type="Label" parent="VBox/Title"]
+margin_left = 420.0
+margin_top = 50.0
+margin_right = 604.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 2 )
+text = "Das Spiel zum Film"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="VBox"]
+margin_top = 180.0
+margin_right = 1025.0
+margin_bottom = 206.0
+alignment = 1
+
+[node name="NameLabel" type="Label" parent="VBox/HBox"]
+margin_left = 450.0
+margin_right = 513.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 3 )
+text = "Name: "
+
+[node name="LineEdit" type="LineEdit" parent="VBox/HBox"]
+margin_left = 517.0
+margin_right = 575.0
+margin_bottom = 26.0
+text = "Player"
+
+[node name="JoinButton" type="Button" parent="VBox"]
+margin_left = 483.0
+margin_top = 306.0
+margin_right = 542.0
+margin_bottom = 335.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 4 )
+text = "Join?"
+
+[node name="Status" type="Label" parent="VBox"]
+margin_top = 435.0
+margin_right = 1025.0
+margin_bottom = 449.0
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -97.4321
+margin_top = -138.0
+margin_right = 97.4321
+margin_bottom = 138.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Players" type="RichTextLabel" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.4321
+margin_top = -119.0
+margin_right = 93.5679
+margin_bottom = 137.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReadyButton" type="Button" parent="Panel"]
+margin_left = 65.0016
+margin_top = 232.003
+margin_right = 128.002
+margin_bottom = 252.003
+text = "Ready"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="VBox/JoinButton" to="." method="_on_JoinButton_pressed"]
+[connection signal="pressed" from="Panel/ReadyButton" to="." method="_on_ReadyButton_pressed"]
